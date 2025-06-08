@@ -9,14 +9,7 @@ import com.carlist.capgemini.service.CarsApiService
 
 class CarRepositoryImpl(private val api: CarsApiService) : CarsRepository {
     override suspend fun getCars(make: String): List<CarDataModel> {
-        try {
             val response = api.getCars(make = make)
             return response.Models.map { CarsMapper().mapToModel(it) }
-
-        }
-        catch (e:Exception){
-            Log.e("erreur",e.localizedMessage)
-            return emptyList()
-        }
      }
 }

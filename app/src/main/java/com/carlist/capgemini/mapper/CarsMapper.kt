@@ -6,6 +6,7 @@ import com.carlist.capgemini.data.CarRemoteDataModel
 class CarsMapper {
     fun mapToModel(model: CarRemoteDataModel):CarDataModel = CarDataModel(    modelName = model.model_name.orEmpty(),
         description = "Model : ${model.model_make_id ?: "N/A"}",
-        imageUrl = "https://via.placeholder.com/150?text=${model.model_name.orEmpty().replace(" ", "+")}"
+        //CANNOT GET IMAGE URL FROM THE FREE VERSION OF Carqueryapi i just used a static url
+        imageUrl = "https://www.wandaloo.com/files/2011/11/AUDI-A1-Sportback-officiel.jpg"
     )
 }
