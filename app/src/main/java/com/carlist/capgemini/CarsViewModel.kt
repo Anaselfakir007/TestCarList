@@ -30,7 +30,7 @@ class CarsViewModel(private val getCarsUseCase: CarsUseCase) : ViewModel() {
     }
 
 sealed class UiState {
-    object Loading : UiState()
+    data object Loading : UiState()
     data class Success(val cars: List<CarDataModel>) : UiState()
     data class Error(val message: Int) : UiState()
 }

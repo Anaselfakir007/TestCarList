@@ -8,6 +8,9 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
+
+//faute de temps je n'es pas utilisé Injection de dependance (Koin par exemple) j'ai juste utiliser Singleton Object
 object ApiUtils {
 
 
